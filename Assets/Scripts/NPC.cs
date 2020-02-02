@@ -45,7 +45,15 @@ public class NPC : MonoBehaviour
 	{
 		string[] choices = { "Hi, Alien.", "Look, a penny.\nAmongst other things. asfuuef fiewuf kirenlorem jeofbla", "Your mom, lawl." };
 		SpeechBubble.Colors[] colors = { SpeechBubble.Colors.Green, SpeechBubble.Colors.Teal, SpeechBubble.Colors.Red };
+		yield return 0;
+	}
+	public IEnumerator ShowChoices(string[] choices, SpeechBubble.Colors[] colors)
+	{
+		yield return ShowChoices(this.transform.position, choices, colors);
+	}
 
+	public IEnumerator ShowChoices(Vector3 pos, string[] choices, SpeechBubble.Colors[] colors)
+	{
 		float offset = 0;
 		List<SpeechBubble> bubbles = new List<SpeechBubble>();
 		for (int i = 0; i < choices.Length; i++)
