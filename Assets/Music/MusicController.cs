@@ -19,14 +19,14 @@ public class MusicController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.E))
         {
            Debug.Log("E key was released");
-            if (music is Music) {
+            if (music != null) {
                 music.SwitchToPast();
             }
         }
         else if (Input.GetKeyUp(KeyCode.R))
         {
             Debug.Log("R key was released");
-            if (music is Music)
+            if (music != null)
             {
                 music.SwitchToPresent();
                
