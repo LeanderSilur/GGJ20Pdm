@@ -29,6 +29,7 @@ public class MusicController : MonoBehaviour
             if (music is Music)
             {
                 music.SwitchToPresent();
+               
             }
         }
     }

@@ -9,10 +9,11 @@ public class Music : MonoBehaviour
     public AudioSource theIntro;
     private int TimeAftermathMusic;
     private int TimePartyMusic;
+    private float IntroVolume;
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -20,6 +21,9 @@ public class Music : MonoBehaviour
     {
         
     }
+
+  
+
     public void SwitchToPast() 
     {
         Debug.Log(TimePartyMusic);
@@ -40,6 +44,15 @@ public class Music : MonoBehaviour
         theParty.Stop();
         Debug.Log("stopped");
 
+
        
+    }
+
+    void FixedUpdate()
+    {
+        if (theAftermath.isPlaying || theParty.isPlaying)
+        {
+            theIntro.volume = theIntro.volume - 0.01f;
+        }
     }
 }
