@@ -548,12 +548,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490951156}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -23.2, y: 0, z: -1.42}
-  m_LocalScale: {x: 0.1, y: 1, z: 0.20000006}
+  m_LocalPosition: {x: -3.2000008, y: 0, z: -1.42}
+  m_LocalScale: {x: 0.1, y: 1, z: 0.20000008}
   m_Children:
   - {fileID: 1730961440}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1011807982}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &490951158
 MonoBehaviour:
@@ -808,12 +808,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589226088}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -18.05, y: 0, z: -3.2}
-  m_LocalScale: {x: 0.1, y: 1, z: 0.20000006}
+  m_LocalPosition: {x: 1.9500008, y: 0, z: -3.2}
+  m_LocalScale: {x: 0.1, y: 1, z: 0.20000008}
   m_Children:
   - {fileID: 1077783377}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1011807982}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &589226090
 MonoBehaviour:
@@ -1138,7 +1138,11 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 589226089}
+  - {fileID: 490951157}
+  - {fileID: 1508524951}
+  - {fileID: 1975992776}
   m_Father: {fileID: 196555710}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1489,7 +1493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b0f483c510d4c23b3b1db25346d168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechBubbleTemplate: {fileID: 0}
+  speechBubbleTemplate: {fileID: 1072263841530230, guid: eb79598cc879541adb52e0a2e7a3fcd0,
+    type: 3}
   Name: Gegenwart
   choiceResult: 0
 --- !u!1 &1342347259
@@ -1724,12 +1729,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508524950}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -23.2, y: 0, z: 1.94}
-  m_LocalScale: {x: 0.1, y: 1, z: 0.20000006}
+  m_LocalPosition: {x: -3.2000008, y: 0, z: 1.94}
+  m_LocalScale: {x: 0.1, y: 1, z: 0.20000008}
   m_Children:
   - {fileID: 743117151}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1011807982}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &1508524952
 MonoBehaviour:
@@ -2021,12 +2026,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975992775}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.47, y: 0, z: 3.83}
+  m_LocalPosition: {x: 3.5300007, y: 0, z: 3.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 450422061}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1011807982}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1975992777
 MonoBehaviour:
@@ -2040,7 +2045,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b0f483c510d4c23b3b1db25346d168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechBubbleTemplate: {fileID: 0}
+  speechBubbleTemplate: {fileID: 1072263841530230, guid: eb79598cc879541adb52e0a2e7a3fcd0,
+    type: 3}
   Name: Vergangenheit
   choiceResult: 0
 --- !u!208 &1975992778

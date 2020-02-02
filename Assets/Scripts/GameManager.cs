@@ -29,13 +29,13 @@ public class GameManager : MonoBehaviour
     bool bed_broken = false;
 
     // Distance of Player to NPC that causes Action
-    private const float DIST_TO_INTERACT = 4.0f;
+    private const float DIST_TO_INTERACT = 2.0f;
 
 
     private void Awake()
     {
-        SwitchToPast(this, new EventArgs());
-
+        //SwitchToPast(this, new EventArgs());
+        SwitchToPresent(this, new EventArgs());
         presentMachine.Jump += new System.EventHandler(this.SwitchToPast);
         pastMachine.Jump += new System.EventHandler(this.SwitchToPresent);
     }
@@ -87,12 +87,13 @@ public class GameManager : MonoBehaviour
         }
 
         // Wenn Clickpunkt erreicht, entferne Clickpunkt
-        if ((avatar.transform.position - clickPoint.transform.position).magnitude < 0.1 && clickPoint.activeSelf) {
+        if ((avatar.transform.position - clickPoint.transform.position).magnitude < DIST_TO_INTERACT && clickPoint.activeSelf) {
             clickPoint.SetActive(false);
 
             float[] distances = new float[NPCs.Length];
             for (int i = 0; i < NPCs.Length; i++)
-                distances[i] = (avatar.transform.position - NPCs[i].transform.position).magnitude;
+                distances[i] = (new Vector3(avatar.transform.position.x, 0.0f, avatar.transform.position.z)
+                    - new Vector3(NPCs[i].transform.position.x, 0.0f, NPCs[i].transform.position.z)).magnitude;
             float minDist = distances.Min();
             if (minDist < DIST_TO_INTERACT)
             {
