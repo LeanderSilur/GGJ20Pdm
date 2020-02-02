@@ -9,6 +9,7 @@ public class SpeechBubble : MonoBehaviour {
 	private Transform background;
 	private Image hightlightImage ;
 	private Text _text;
+	private Camera cam;
 	public string Text {
 		set {
 			TextGenerator textGen = new TextGenerator();
@@ -44,7 +45,9 @@ public class SpeechBubble : MonoBehaviour {
 	
 	public Vector3 TextPosition {
 		set {
-        	this.transform.position = Camera.main.WorldToScreenPoint(value);
+			if (value != null) {
+				this.transform.position = cam.WorldToScreenPoint(value);
+			}
 		}
 	}
 	public void ShiftUp(float amount) {
@@ -77,8 +80,11 @@ public class SpeechBubble : MonoBehaviour {
 		_text = background.GetChild(0).GetComponent<Text>();
 		GameObject canvas = GameObject.Find("Canvas");
 		transform.SetParent(canvas.transform);
+
+		GameObject manager = GameObject.Find("GameManager");
+		cam = manager.GetComponent<GameManager>().activeCamera;
 	}
-	
+
 	// Use this for initialization
 	void Start () {
 		

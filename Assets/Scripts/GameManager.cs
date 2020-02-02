@@ -8,7 +8,7 @@ using UnityEngine.AI;
 
 public class GameManager : MonoBehaviour
 {
-    private Camera activeCamera;
+    public Camera activeCamera { get; private set; }
 
     public NPC[] NPCs;
     public NavMeshAgent avatar;
