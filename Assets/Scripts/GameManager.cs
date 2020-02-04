@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public Timemachine pastMachine;
     public Camera presentCam;
     public Camera pastCam;
+    private Music music;
 
     bool dead_body = true;
     bool chair_broken = true;
@@ -34,10 +35,16 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+
+        //Can create musicobjects
+        GameObject ob = (GameObject)Instantiate(Resources.Load("Music"));
+        music = ob.GetComponent<Music>();
+
         //SwitchToPast(this, new EventArgs());
         SwitchToPresent(this, new EventArgs());
         presentMachine.Jump += new System.EventHandler(this.SwitchToPast);
         pastMachine.Jump += new System.EventHandler(this.SwitchToPresent);
+
     }
     // Start is called before the first frame update
     void Start()
@@ -154,6 +161,7 @@ public class GameManager : MonoBehaviour
 
     void SwitchToPast(object o, EventArgs e)
     {
+        music.SwitchToPast();
         pastCam.enabled = true;
         presentCam.enabled = false;
         activeCamera = pastCam;
@@ -163,6 +171,7 @@ public class GameManager : MonoBehaviour
 
     void SwitchToPresent(object o, EventArgs e)
     {
+        music.SwitchToPresent();
         pastCam.enabled = false;
         presentCam.enabled = true;
         activeCamera = presentCam;
