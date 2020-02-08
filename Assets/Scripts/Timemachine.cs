@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+ 
 public class Timemachine : NPC
 {
-	public EventHandler Jump;
-    private enum TIME { Past = 0, Present = 1 };
-
+	public GameManager gm;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -26,10 +24,10 @@ public class Timemachine : NPC
 		string[] choices = { "Jump.", "Stay." };
 		SpeechBubble.Colors[] colors = { SpeechBubble.Colors.Red, SpeechBubble.Colors.Gray };
 		yield return ShowChoices(choices, colors);
+		Debug.Log(choiceResult.ToString());
 		if (choiceResult == 0)
         {
-			if (Jump != null)
-				Jump(this, new EventArgs());
+			yield return Jump();
         }
         /*
 		if (actionID == 3) { // actionID 3 => State, der besagt, dass Zeit geswitcht werden kann.
@@ -49,8 +47,9 @@ public class Timemachine : NPC
         */
 	}
 
-    private IEnumerator switchTo(Timemachine.TIME time)
+    public IEnumerator Jump()
     {
+		gm.SwitchTime();
 		yield return 0;
     }
 }
