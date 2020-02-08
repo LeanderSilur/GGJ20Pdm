@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+ 
 public class SpeechBubble : MonoBehaviour {
 
 	private Transform background;
@@ -82,7 +82,7 @@ public class SpeechBubble : MonoBehaviour {
 		transform.SetParent(canvas.transform);
 
 		GameObject manager = GameObject.Find("GameManager");
-		cam = manager.GetComponent<GameManager>().activeCamera;
+		cam = manager.GetComponent<GameManager>().cam;
 	}
 
 	// Use this for initialization
