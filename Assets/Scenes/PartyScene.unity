@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 12678050}
   - component: {fileID: 12678051}
+  - component: {fileID: 12678052}
   m_Layer: 0
   m_Name: timemachine
   m_TagString: Untagged
@@ -203,6 +204,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!208 &12678052
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12678049}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.42, y: 3.005, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &42293629
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +310,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 45323619}
-  - component: {fileID: 45323620}
   - component: {fileID: 45323621}
   m_Layer: 0
   m_Name: Centicat
@@ -310,29 +326,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45323618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 19.55, y: 0, z: -4.079}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 932043853}
   m_Father: {fileID: 1011807982}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!208 &45323620
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45323618}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!114 &45323621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,7 +345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aac2d75fb0ef4bc0a0b78293cfb3bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechBubbleTemplate: {fileID: 0}
+  speechBubbleTemplate: {fileID: 1072263841530230, guid: eb79598cc879541adb52e0a2e7a3fcd0,
+    type: 3}
   Name: 
   choiceResult: 0
 --- !u!1 &48177461
@@ -391,6 +392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 120570830}
   - component: {fileID: 120570831}
+  - component: {fileID: 120570832}
   m_Layer: 0
   m_Name: computor man dance
   m_TagString: Untagged
@@ -406,8 +408,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120570829}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.27, y: 1.656, z: 0}
-  m_LocalScale: {x: 0.11578724, y: 0.11578724, z: 0.11578724}
+  m_LocalPosition: {x: 0, y: 1.16, z: 0}
+  m_LocalScale: {x: 0.18550274, y: 0.18550274, z: 0.18550274}
   m_Children: []
   m_Father: {fileID: 862855067}
   m_RootOrder: 0
@@ -462,6 +464,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!208 &120570832
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120570829}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.7400002, y: 6.2450004, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &308992085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -658,7 +676,6 @@ GameObject:
   m_Component:
   - component: {fileID: 490951157}
   - component: {fileID: 490951160}
-  - component: {fileID: 490951159}
   - component: {fileID: 490951158}
   m_Layer: 0
   m_Name: TentaChar
@@ -674,14 +691,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490951156}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 16.74, y: 0, z: -1.42}
-  m_LocalScale: {x: 0.1, y: 1, z: 0.20000008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.74, y: 0, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1730961440}
   m_Father: {fileID: 1011807982}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &490951158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,22 +715,6 @@ MonoBehaviour:
     type: 3}
   Name: 
   choiceResult: 0
---- !u!208 &490951159
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490951156}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 5, y: 0.25, z: 5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!33 &490951160
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -830,6 +831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 576202828}
   - component: {fileID: 576202827}
+  - component: {fileID: 576202829}
   m_Layer: 0
   m_Name: Player Character
   m_TagString: Untagged
@@ -875,6 +877,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &576202829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576202826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b3f8c78098be41daa8344697ec20051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avatar: {fileID: 576202827}
+  gm: {fileID: 1659895768}
+  clickPointPrefab: {fileID: 7481560499361487999, guid: 97518c5630818419f84a6c52eb637c47,
+    type: 3}
+  locked: 0
 --- !u!1 &589226088
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +904,6 @@ GameObject:
   m_Component:
   - component: {fileID: 589226089}
   - component: {fileID: 589226092}
-  - component: {fileID: 589226091}
   - component: {fileID: 589226090}
   m_Layer: 0
   m_Name: CubeChar
@@ -901,14 +919,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589226088}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 21.890001, y: 0, z: -3.2}
-  m_LocalScale: {x: 0.1, y: 1, z: 0.20000008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.890001, y: 0, z: -4.885}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1077783377}
   m_Father: {fileID: 1011807982}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &589226090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,22 +943,6 @@ MonoBehaviour:
     type: 3}
   Name: Cubi
   choiceResult: 0
---- !u!208 &589226091
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589226088}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 5, y: 0.25, z: 5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!33 &589226092
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -958,7 +960,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 651256001}
-  - component: {fileID: 651256002}
   - component: {fileID: 651256003}
   m_Layer: 0
   m_Name: Dragonborn
@@ -975,29 +976,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651256000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 16.03, y: 0, z: -3.871}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1937941225}
   m_Father: {fileID: 1011807982}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!208 &651256002
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651256000}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!114 &651256003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,7 +995,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aac2d75fb0ef4bc0a0b78293cfb3bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechBubbleTemplate: {fileID: 0}
+  speechBubbleTemplate: {fileID: 1072263841530230, guid: eb79598cc879541adb52e0a2e7a3fcd0,
+    type: 3}
   Name: 
   choiceResult: 0
 --- !u!1 &683360168
@@ -1023,6 +1009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 683360169}
   - component: {fileID: 683360170}
+  - component: {fileID: 683360171}
   m_Layer: 0
   m_Name: cool sien mermaid
   m_TagString: Untagged
@@ -1038,8 +1025,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 683360168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.99, y: 1.03, z: 2.29}
-  m_LocalScale: {x: 0.15795092, y: 0.15795092, z: 0.15795092}
+  m_LocalPosition: {x: 0, y: 0.95, z: 0}
+  m_LocalScale: {x: 0.21427622, y: 0.21427622, z: 0.21427622}
   m_Children: []
   m_Father: {fileID: 1400369901}
   m_RootOrder: 0
@@ -1094,6 +1081,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!208 &683360171
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683360168}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.13, y: 4.5950003, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,6 +1199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 743117151}
   - component: {fileID: 743117152}
+  - component: {fileID: 743117153}
   m_Layer: 0
   m_Name: screwie_sprite
   m_TagString: Untagged
@@ -1210,9 +1214,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743117150}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 3.03}
-  m_LocalScale: {x: 1.1561252, y: 0.5780624, z: 0.11561249}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.93, z: 3.03}
+  m_LocalScale: {x: 0.1607598, y: 0.1607598, z: 0.1607598}
   m_Children: []
   m_Father: {fileID: 1508524951}
   m_RootOrder: 0
@@ -1267,6 +1271,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!208 &743117153
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743117150}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.44, y: 5.69, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &747536100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,7 +1469,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 862855067}
-  - component: {fileID: 862855068}
   - component: {fileID: 862855069}
   m_Layer: 0
   m_Name: Hack0rman
@@ -1466,29 +1485,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862855066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 23.77, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 120570830}
   m_Father: {fileID: 1011807982}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!208 &862855068
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 862855066}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!114 &862855069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1501,7 +1504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aac2d75fb0ef4bc0a0b78293cfb3bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechBubbleTemplate: {fileID: 0}
+  speechBubbleTemplate: {fileID: 1072263841530230, guid: eb79598cc879541adb52e0a2e7a3fcd0,
+    type: 3}
   Name: 
   choiceResult: 0
 --- !u!1 &932043852
@@ -1514,6 +1518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 932043853}
   - component: {fileID: 932043854}
+  - component: {fileID: 932043855}
   m_Layer: 0
   m_Name: centipede cat
   m_TagString: Untagged
@@ -1528,9 +1533,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932043852}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.27, y: -0.364, z: -3.314}
-  m_LocalScale: {x: 0.12773, y: 0.12773, z: 0.12773}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.56, z: 0}
+  m_LocalScale: {x: 0.16327727, y: 0.16327727, z: 0.16327727}
   m_Children: []
   m_Father: {fileID: 45323619}
   m_RootOrder: 0
@@ -1585,6 +1590,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!208 &932043855
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932043852}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 6.9150004, y: 2.66, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,6 +1740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1077783377}
   - component: {fileID: 1077783378}
+  - component: {fileID: 1077783379}
   m_Layer: 0
   m_Name: jellycube_sprite
   m_TagString: Untagged
@@ -1733,9 +1755,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077783376}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 2.4}
-  m_LocalScale: {x: 1.1561252, y: 0.5780624, z: 0.11561249}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.00000023842, y: 0.7, z: 2.4}
+  m_LocalScale: {x: 0.18015, y: 0.18015, z: 0.18015}
   m_Children: []
   m_Father: {fileID: 589226089}
   m_RootOrder: 0
@@ -1790,6 +1812,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!208 &1077783379
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077783376}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 4.4100003, y: 4.485, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1247417629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,6 +1838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1247417630}
   - component: {fileID: 1247417631}
+  - component: {fileID: 1247417632}
   m_Layer: 0
   m_Name: Alien insect party
   m_TagString: Untagged
@@ -1814,9 +1853,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247417629}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.2, y: 0.693, z: 0}
-  m_LocalScale: {x: 0.07610919, y: 0.07610919, z: 0.07610919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.21, z: 0}
+  m_LocalScale: {x: 0.13339658, y: 0.13339658, z: 0.13339658}
   m_Children: []
   m_Father: {fileID: 2056421323}
   m_RootOrder: 0
@@ -1871,6 +1910,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!208 &1247417632
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247417629}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 6.01, y: 8.8, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1304872536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,7 +2028,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1400369901}
-  - component: {fileID: 1400369902}
   - component: {fileID: 1400369903}
   m_Layer: 0
   m_Name: Mermaid
@@ -1990,29 +2044,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400369900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 20.82, y: 0, z: 3.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 683360169}
   m_Father: {fileID: 1011807982}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!208 &1400369902
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400369900}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!114 &1400369903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2025,7 +2063,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aac2d75fb0ef4bc0a0b78293cfb3bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechBubbleTemplate: {fileID: 0}
+  speechBubbleTemplate: {fileID: 1072263841530230, guid: eb79598cc879541adb52e0a2e7a3fcd0,
+    type: 3}
   Name: 
   choiceResult: 0
 --- !u!1 &1477522862
@@ -2243,7 +2282,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1508524951}
   - component: {fileID: 1508524954}
-  - component: {fileID: 1508524953}
   - component: {fileID: 1508524952}
   m_Layer: 0
   m_Name: ScrewChar
@@ -2259,14 +2297,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508524950}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 16.74, y: 0, z: 1.94}
-  m_LocalScale: {x: 0.1, y: 1, z: 0.20000008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.74, y: 0, z: -4.37}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 743117151}
   m_Father: {fileID: 1011807982}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1508524952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2283,22 +2321,6 @@ MonoBehaviour:
     type: 3}
   Name: 
   choiceResult: 0
---- !u!208 &1508524953
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508524950}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 5, y: 0.25, z: 5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!33 &1508524954
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2361,10 +2383,8 @@ MonoBehaviour:
   - {fileID: 1400369903}
   - {fileID: 651256003}
   - {fileID: 1883094208}
-  avatar: {fileID: 576202827}
+  avatar: {fileID: 576202829}
   floor: {fileID: 1477522863}
-  clickPointPrefab: {fileID: 7481560499361487999, guid: 97518c5630818419f84a6c52eb637c47,
-    type: 3}
   tm: {fileID: 2137268046}
   cam: {fileID: 963194227}
 --- !u!1 &1689853894
@@ -2391,11 +2411,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689853894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.416, y: 2.403, z: 1.395}
+  m_LocalPosition: {x: -1.416, y: 3.202, z: 1.395}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1304872540}
   - {fileID: 48177462}
+  - {fileID: 1981903512}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2409,6 +2430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1730961440}
   - component: {fileID: 1730961441}
+  - component: {fileID: 1730961442}
   m_Layer: 0
   m_Name: tentacle_sprite
   m_TagString: Untagged
@@ -2423,9 +2445,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730961439}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 2.98}
-  m_LocalScale: {x: 1.1561252, y: 0.5780624, z: 0.11561249}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.00000023842, y: 1.72, z: 2.98}
+  m_LocalScale: {x: 0.33742297, y: 0.33742297, z: 0.33742297}
   m_Children: []
   m_Father: {fileID: 490951157}
   m_RootOrder: 0
@@ -2480,6 +2502,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!208 &1730961442
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730961439}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5.03, y: 5.2400002, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1883094205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2554,6 +2592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1937941225}
   - component: {fileID: 1937941226}
+  - component: {fileID: 1937941227}
   m_Layer: 0
   m_Name: MURK aligator427 his drinking
   m_TagString: Untagged
@@ -2569,8 +2608,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937941224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.134, y: 0.91, z: -1.727}
-  m_LocalScale: {x: 0.0817472, y: 0.0817472, z: 0.0817472}
+  m_LocalPosition: {x: 0, y: 1.31, z: 0}
+  m_LocalScale: {x: 0.1833426, y: 0.1833426, z: 0.1833426}
   m_Children: []
   m_Father: {fileID: 651256001}
   m_RootOrder: 0
@@ -2625,6 +2664,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!208 &1937941227
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937941224}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 4.7700005, y: 6.7700005, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1971636367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,6 +2772,100 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1981903511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1981903512}
+  - component: {fileID: 1981903515}
+  - component: {fileID: 1981903514}
+  - component: {fileID: 1981903513}
+  m_Layer: 0
+  m_Name: Line
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1981903512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981903511}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.00000011921, y: 1.8415, z: -0.00000011921}
+  m_LocalScale: {x: 0.009, y: 1.6801254, z: 0.009}
+  m_Children: []
+  m_Father: {fileID: 1689853895}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1981903513
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981903511}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &1981903514
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981903511}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1981903515
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981903511}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2056421322
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,7 +2875,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2056421323}
-  - component: {fileID: 2056421324}
   - component: {fileID: 2056421325}
   m_Layer: 0
   m_Name: AlienInsect
@@ -2743,29 +2891,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056421322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 19.42, y: 0, z: -1.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1247417630}
   m_Father: {fileID: 1011807982}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!208 &2056421324
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2056421322}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!114 &2056421325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2778,7 +2910,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a1f5a3e302c5441fb2775ffd566bc97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechBubbleTemplate: {fileID: 0}
+  speechBubbleTemplate: {fileID: 1072263841530230, guid: eb79598cc879541adb52e0a2e7a3fcd0,
+    type: 3}
   Name: 
   choiceResult: 0
 --- !u!1 &2137268044
@@ -2790,7 +2923,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2137268045}
-  - component: {fileID: 2137268047}
   - component: {fileID: 2137268046}
   m_Layer: 0
   m_Name: TimeMachine
@@ -2831,19 +2963,3 @@ MonoBehaviour:
   Name: Gegenwart
   choiceResult: 0
   gm: {fileID: 1659895768}
---- !u!208 &2137268047
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137268044}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1, y: 2, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.78, y: 2, z: -0.4}
-  m_TimeToStationary: 0.5

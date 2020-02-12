@@ -23,7 +23,7 @@ public class NPC : MonoBehaviour
     public virtual IEnumerator Interact(int actionID)
     {
         yield return ShowDialogue(transform.position, "Hello, I'm " + Name + ".");
-        yield return 0;
+        //yield return 0;
     }
  
     public IEnumerator ShowDialogue(Vector3 pos, string msg)
@@ -47,48 +47,57 @@ public class NPC : MonoBehaviour
 		SpeechBubble.Colors[] colors = { SpeechBubble.Colors.Green, SpeechBubble.Colors.Teal, SpeechBubble.Colors.Red };
 		yield return ShowChoices(choices, colors);
 	}
+
 	public IEnumerator ShowChoices(string[] choices, SpeechBubble.Colors[] colors)
 	{
-		yield return ShowChoices(this.transform.position, choices, colors);
+			yield return ShowChoices(this.transform.position, choices, colors);
 	}
 
 	public IEnumerator ShowChoices(Vector3 pos, string[] choices, SpeechBubble.Colors[] colors)
 	{
-		float offset = 0;
-		List<SpeechBubble> bubbles = new List<SpeechBubble>();
-		for (int i = 0; i < choices.Length; i++)
-		{
-			GameObject ob = (GameObject)GameObject.Instantiate(speechBubbleTemplate);
-			var bubble = ob.GetComponent<SpeechBubble>();
-			bubble.TextPosition = pos;
-			bubble.ShiftUp(offset);
-			bubble.Text = choices[i];
-			bubble.Color = colors[i];
-			bubbles.Add(bubble);
-			offset += bubble.BoxHeight + 20;
-		}
+	    if (choices.Length != colors.Length)
+	    {
+		    Debug.Log("Falscher Aufruf: choices und colors müssen dieselbe Anzahl von Einträgen aufweisen.");
+		    yield return 0;
+	    }
+	    else
+	    {
+		    float offset = 0;
+		    List<SpeechBubble> bubbles = new List<SpeechBubble>();
+		    for (int i = 0; i < choices.Length; i++)
+		    {
+			    GameObject ob = (GameObject)GameObject.Instantiate(speechBubbleTemplate);
+			    var bubble = ob.GetComponent<SpeechBubble>();
+			    bubble.TextPosition = pos;
+			    bubble.ShiftUp(offset);
+			    bubble.Text = choices[i];
+			    bubble.Color = colors[i];
+			    bubbles.Add(bubble);
+			    offset += bubble.BoxHeight + 20;
+		    }
 
-		choiceResult = -1;
+		    choiceResult = -1;
 
-		while (choiceResult == -1)
-		{
-			if (Input.GetMouseButtonUp(0))
-			{
-				for (int i = 0; i < bubbles.Count; i++)
-				{
-					if (bubbles[i].ContainsMouse())
-					{
-						choiceResult = i;
-						break;
-					}
-				}
-			}
-			yield return 0;
-		}
-		foreach (var bubble in bubbles)
-		{
-			Destroy(bubble.gameObject);
-		}
+		    while (choiceResult == -1)
+		    {
+			    if (Input.GetMouseButtonUp(0))
+			    {
+				    for (int i = 0; i < bubbles.Count; i++)
+				    {
+					    if (bubbles[i].ContainsMouse())
+					    {
+						    choiceResult = i;
+						    break;
+					    }
+				    }
+			    }
+			    yield return 0;
+		    }
+		    foreach (var bubble in bubbles)
+		    {
+			    Destroy(bubble.gameObject);
+		    }
 
+	    }
 	}
 }
