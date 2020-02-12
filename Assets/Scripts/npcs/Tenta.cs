@@ -18,7 +18,7 @@ public class Tenta : NPC
 
 	public override IEnumerator Interact(int actionID)
 	{
-		yield return ShowDialogue(transform.position, "Clicked on the tenta. Amongst other things. asfuuef fiewuf kirenlorem jeofbla Click anywhere to continue");
+		yield return ShowDialogue(transform.position, "Clicked on the tenta. Amongst other things. Click anywhere to continue...");
 
 		yield return ShowChoices(transform.position);
 

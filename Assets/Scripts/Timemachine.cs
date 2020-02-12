@@ -24,7 +24,7 @@ public class Timemachine : NPC
 		string[] choices = { "Jump.", "Stay." };
 		SpeechBubble.Colors[] colors = { SpeechBubble.Colors.Red, SpeechBubble.Colors.Gray };
 		yield return ShowChoices(choices, colors);
-		Debug.Log(choiceResult.ToString());
+
 		if (choiceResult == 0)
         {
 			yield return Jump();

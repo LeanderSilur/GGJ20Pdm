@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
     bool bed_broken = false;
     */
 
+    float? dist_to_target;
+    float? time_last_dist;
+
     // Distance of Player from Target-Marker, before it disappears
     private const float DIST_TO_SHOW_TARGET = 1.0f;
     // Distance of Player to NPC that causes Action
@@ -109,34 +112,68 @@ public class GameManager : MonoBehaviour
         // Wenn Clickpunkt erreicht, entferne Clickpunkt
         if ((avatar.transform.position - clickPoint.transform.position).magnitude < DIST_TO_SHOW_TARGET && clickPoint.activeSelf)
         {
-            clickPoint.SetActive(false);
-        
-
-            // Prüfe Nähe zu Interaktionspartnern
-        
-            float[] distances = new float[NPCs.Length];
-            for (int i = 0; i < NPCs.Length; i++)
-                distances[i] = (new Vector3(avatar.transform.position.x, 0.0f, avatar.transform.position.z)
-                    - new Vector3(NPCs[i].transform.position.x, 0.0f, NPCs[i].transform.position.z)).magnitude;
-            float minDist = distances.Min();
-            if (minDist < DIST_TO_INTERACT)
-            {
-                int minIndex = Array.IndexOf(distances, minDist);
-
-                NPC closestNpc = NPCs[minIndex];
-
-                //StartCoroutine(Story(closestNpc as Tenta));
-                int actionID = 0;
-                if(closestNpc.Name == "Time Machine")
-                {
-                    actionID = 3; // TM soll Zeitsprung durchführen
-                }
-                StartCoroutine(Story(closestNpc, actionID));
-                //}
-            }
+            targetReached();
         }
 
-    } 
+        // TODO: Target als Eigenschaft des Players festlegen
+        //Vector3 target = 
+
+        if (!avatar.isStopped && clickPoint.activeSelf)
+        {
+            float dist = (avatar.transform.position - clickPoint.transform.position).magnitude;
+            float dist_time = Time.fixedTime;
+
+            // wenn noch gar kein vorheriger Abstand vorliegt, oder sich der Abstand seit dem letzten Mal um mehr als 0.1 verkleinert hat,
+            // neu als bisher größte Annäherung speichern
+            if(this.dist_to_target == null || this.dist_to_target - dist > 0.1)
+            {
+                this.dist_to_target = dist;
+                this.time_last_dist = dist_time;
+            }
+            else
+            {
+                // wenn der Abstand nahezu Null beträgt, oder sogar größer wurde, noch 0.4s warten, dann stoppen.
+                if((dist_time - this.time_last_dist) > 0.4)
+                {
+                    this.time_last_dist = null;
+                    this.dist_to_target = null;
+                    avatar.isStopped = true;
+                    targetReached();
+                }
+            }
+
+        }
+
+    }
+
+    private void targetReached()
+    {
+        clickPoint.SetActive(false);
+
+
+        // Prüfe Nähe zu Interaktionspartnern
+
+        float[] distances = new float[NPCs.Length];
+        for (int i = 0; i < NPCs.Length; i++)
+            distances[i] = (new Vector3(avatar.transform.position.x, 0.0f, avatar.transform.position.z)
+                - new Vector3(NPCs[i].transform.position.x, 0.0f, NPCs[i].transform.position.z)).magnitude;
+        float minDist = distances.Min();
+        if (minDist < DIST_TO_INTERACT)
+        {
+            int minIndex = Array.IndexOf(distances, minDist);
+
+            NPC closestNpc = NPCs[minIndex];
+
+            //StartCoroutine(Story(closestNpc as Tenta));
+            int actionID = 0;
+            if (closestNpc.Name == "Time Machine")
+            {
+                actionID = 3; // TM soll Zeitsprung durchführen
+            }
+            StartCoroutine(Story(closestNpc, actionID));
+            //}
+        }
+    }
 
     //private IEnumerator Story(Tenta tenta)
     private IEnumerator Story(NPC npc, int actionID)
